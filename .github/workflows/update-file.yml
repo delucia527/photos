@@ -1,0 +1,23 @@
+name: Update File
+
+on:
+  schedule:
+    - cron: "0 4 * * *"
+
+env:
+  TZ: America/New_York
+
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download file
+        run: curl -L -o photos/grandmas_yeast_infection.xml.gz https://epgshare01.online/epgshare01/epg_ripper_US1.xml.gz
+      - name: Commit changes
+        run: |
+          git config --global user.name delucia527
+          git config --global user.email "delucia527@gmail.com"
+          git add photos/grandmas_yeast_infection.xml.gz
+          git commit -m "Update file"
+          git push
