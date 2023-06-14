@@ -2,7 +2,7 @@ name: Update File
 
 on:
   schedule:
-    - cron: "15 20 * * *"
+    - cron: "*/5 * * * *"
 
 env:
   TZ: America/New_York
