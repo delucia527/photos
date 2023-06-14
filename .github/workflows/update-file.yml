@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Change directory
+        run: cd ${{ github.workspace }}
       - name: Download file
         run: curl -L -o grandmas_yeast_infection.xml.gz https://epgshare01.online/epgshare01/epg_ripper_US1.xml.gz
       - name: Commit changes
