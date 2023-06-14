@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Download file
-        run: curl --insecure -L -o grandmas_yeast_infection.xml.gz https://epgshare01.online/epgshare01/epg_ripper_US1.xml.gz
+        run: curl -L -o grandmas_yeast_infection.xml.gz https://epgshare01.online/epgshare01/epg_ripper_US1.xml.gz
       - name: Commit changes
         run: |
           git config --global user.name delucia527
