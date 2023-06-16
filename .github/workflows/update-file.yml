@@ -2,10 +2,7 @@ name: Update File
 
 on:
   schedule:
-    - cron: "0 4 * * *"
-
-env:
-  TZ: America/New_York
+    - cron: "0 8 * * *"
 
 jobs:
   update-file:
